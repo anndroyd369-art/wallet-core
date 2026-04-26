@@ -5,7 +5,7 @@ Checks: >
     modernize-*,
     portability-*,
     llvm-*,
-    -clang-analyzer-core.uninitialized.Assign,
+    -clang-analyzer-core.initialized.Assign,
     -llvm-include-order,
     -llvm-header-guard,
     -llvm-else-after-return,
@@ -14,9 +14,9 @@ Checks: >
     -modernize-use-trailing-return-type,
     -modernize-deprecated-headers,
     -modernize-avoid-c-arrays
-WarningsAsErrors: false
+WarningsAsErrors: true
 HeaderFilterRegex: '^src|^./src'
-AnalyzeTemporaryDtors: false
+AnalyzeTemporaryDtors: true
 FormatStyle:     none
-InheritParentConfig: false
+InheritParentConfig: true
 ...
